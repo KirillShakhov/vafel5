@@ -45,7 +45,7 @@ public class AdamsMethodMath {
 
     public void calculate() {
         boolean flag = false;
-        h = 0.1;
+        h = (xEnd - x0)/4;
         do {
             this.steps = (int) ((xEnd - x0)/h);
             arrayX = new double[steps];
