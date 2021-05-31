@@ -11,10 +11,8 @@ public class CauchyProblem implements ICommand {
 
     @Override
     public void execute() {
-        ArrayList<ICommand> commands = new ArrayList<>();
-        commands.add(new RungeKuttaMethod());
-        //
-        MenuModule menu = new MenuModule(commands);
+        MenuModule menu = new MenuModule(true);
+        menu.addCommand(new RungeKuttaMethod());
         menu.execute();
     }
 }
